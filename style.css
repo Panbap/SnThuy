@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/cc/60/66/cc606605b634f5e2cd0b7a35c287f07b.gif'); /* Hình nền */
+    background-size: cover;
+    overflow: hidden; /* Để tránh thanh cuộn khi bóng bay */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Màu nền sáng hơn để dễ đọc hơn */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #2c6ac7; /* Màu hồng tươi sáng */
+}
+
+.birthday-img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.message {
+    font-size: 1.5em;
+    color: #333; /* Màu chữ tối hơn cho dễ đọc */
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #2b6d2b; /* Màu nền của nút */
+    color: white; /* Màu chữ của nút */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff69b4; /* Màu nền nút khi di chuột */
+}
+
+.cake-section {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Màu nền sáng hơn để dễ đọc hơn */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cake-img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Phần bóng bay */
+.balloons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Để người dùng có thể nhấn nút mà không bị ảnh hưởng bởi bóng bay */
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 60px;
+    height: auto;
+    background-image: url('a1a.jpg'); /* Hình ảnh bóng bay đỏ */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: float 6s linear infinite;
+    opacity: 0.8;
+}
+
+/* Hoạt ảnh bay lên */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+/* Thay đổi màu bóng bay */
+.balloon:nth-child(2) {
+    background-image: url('balloon-blue.png'); /* Hình ảnh bóng bay xanh */
+    animation-duration: 7s;
+}
+
+.balloon:nth-child(3) {
+    background-image: url('balloon-green.png'); /* Hình ảnh bóng bay xanh lá */
+    animation-duration: 8s;
+}
+
+.balloon:nth-child(4) {
+    background-image: url('balloon-yellow.png'); /* Hình ảnh bóng bay vàng */
+}

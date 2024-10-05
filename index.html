@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="cmsn.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    
+    <div class="container">
+        <h1>Chúc Mừng Sinh Nhật!</h1>
+        <img src="sn.PNG" alt="Birthday Person" class="birthday-img">
+        <p id="message" class="message"></p>
+        <button onclick="showMessage()">Hiển Thị Lời Chúc</button>
+    </div>
+
+    <!-- Khu vực tách riêng cho ảnh bánh sinh nhật -->
+    <div class="cake-section">
+        <img src="https://haycafe.vn/wp-content/uploads/2022/01/hinh-dong-chuc-mung-sinh-nhat-be-meo-cute.gif" alt="Birthday Cake" class="cake-img">
+    </div>
+
+    <!-- Khu vực thêm bóng bay -->
+    <div class="balloons">
+        <!-- Các bóng bay sẽ tự động được thêm vào đây thông qua JavaScript -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
